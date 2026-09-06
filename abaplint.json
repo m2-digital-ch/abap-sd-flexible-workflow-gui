@@ -1,0 +1,85 @@
+{
+  "global": {
+    "files": "/src/**/*.*"
+  },
+  "dependencies": [
+    {
+      "url": "https://github.com/abaplint/deps",
+      "folder": "/deps",
+      "files": "/src/**/*.*"
+    },
+    {
+      "folder": "/abaplint-deps",
+      "files": "/**/*.abap"
+    }
+  ],
+  "syntax": {
+    "version": "v754",
+    "errorNamespace": "^(Z|Y|LCL_|TY_|LIF_)"
+  },
+  "rules": {
+    "7bit_ascii": {
+      "exclude": [".*\\.xml$"]
+    },
+    "abapdoc": true,
+    "avoid_use": {
+      "define": true,
+      "endselect": true,
+      "execSQL": true,
+      "kernelCall": true,
+      "communication": true,
+      "statics": true,
+      "systemCall": true,
+      "defaultKey": false,
+      "break": true,
+      "testSeams": true,
+      "describeLines": true
+    },
+    "check_syntax": true,
+    "colon_missing_space": true,
+    "commented_code": true,
+    "contains_tab": true,
+    "definitions_top": true,
+    "double_space": true,
+    "empty_statement": true,
+    "empty_structure": true,
+    "exit_or_check": true,
+    "functional_writing": true,
+    "if_in_if": true,
+    "in_statement_indentation": true,
+    "indentation": true,
+    "keyword_case": {
+      "style": "upper",
+      "ignoreExceptions": true,
+      "ignoreLowerClassImplmentationStatement": true,
+      "ignoreGlobalClassDefinition": false,
+      "ignoreGlobalInterface": false,
+      "ignoreFunctionModuleName": false
+    },
+    "line_length": {
+      "length": 120
+    },
+    "line_only_punc": true,
+    "local_class_naming": {
+      "local": "^LCL_.+$",
+      "exception": "^LCX_.+$",
+      "test": "^LTCL_.+$"
+    },
+    "max_one_statement": true,
+    "method_length": {
+      "statements": 100
+    },
+    "obsolete_statement": true,
+    "parser_error": true,
+    "prefer_returning_to_exporting": true,
+    "sequential_blank": {
+      "lines": 4
+    },
+    "space_before_colon": true,
+    "space_before_dot": true,
+    "start_at_tab": true,
+    "unreachable_code": true,
+    "unused_variables": true,
+    "whitespace_end": true
+  }
+}
